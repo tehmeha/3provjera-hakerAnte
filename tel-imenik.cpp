@@ -9,6 +9,7 @@ int main()
     int MAX = 50;
     string prezimeIme[MAX];
     unsigned long long brTelefona[MAX];
+    string adresa[MAX];
     ofstream datotekaUpisivanje;
     ifstream datotekaUcitavanje;
 
@@ -17,7 +18,7 @@ int main()
         cout << "Glavni izbornik" << endl;
         cout << "1. Unos nove osobe" << endl;
         cout << "2. Ispisi sve podatke" << endl;
-        cout << "3. Pretraga prema telefosnkom broju" << endl;
+        cout << "3. Pretraga prema telefonskom broju" << endl;
         cout << "4. Pretraga prema prezimenu i imenu" << endl;
         cout << "5. Izmjena podataka prema telefonskom broju" << endl;
         cout << "6. Ispisi sortirano prema prezimenu i imenu" << endl;
@@ -30,7 +31,7 @@ int main()
             cin.ignore();
             getline(cin, prezimeIme[brojOsoba]);
             //! UNOS broja telefona i adrese
-            cout << "upisite broje telefona: ";
+            cout << "upisite broj telefona: ";
             cin >> brTelefona[brojOsoba];
             cout << "unesite adresu: ";
             cin.ignore();
@@ -42,12 +43,11 @@ int main()
             cout << "prezime i ime" << "\t" << "broj telefona" << "\t" << "adresa" << endl;
             for( int i = 0; i < brojOsoba; i++ )
             {
-                cout << prezimeIme[i] << endl;
+                cout << prezimeIme[i] << "\t" << brojTelefona[i] << "\t" << "\t" << adresa[i] << endl;
             }
         }
         else if( izbor == 3 )
         {
-            cout
         }
         else if( izbor == 4 )
         {
