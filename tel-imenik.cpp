@@ -30,7 +30,6 @@ int main()
             cout << "Unesite ime i prezime: ";
             cin.ignore();
             getline(cin, prezimeIme[brojOsoba]);
-            //! UNOS broja telefona i adrese
             cout << "upisite broj telefona: ";
             cin >> brTelefona[brojOsoba];
             cout << "unesite adresu: ";
@@ -48,6 +47,22 @@ int main()
         }
         else if( izbor == 3 )
         {
+            unsigned long long int brtelefona;
+            cout << " unesite broj telefona: ";
+            cin >> brtelefona;
+            bool postoji=false;
+            for(int i=0;i<brojOsoba;i++)
+            {
+                if(brtelefona==brTelefona[i])
+                {
+                    cout<<"broj se nalazi u imeniku " << endl;
+                    cout << prezimeIme[i] << "\t" << brTelefona[i] << "\t" << "\t" << adresa[i] << endl;
+                    postoji=true;
+                    break;
+                }
+            }
+            if(postoji==false)
+                cout<< "ne postoji u imeniku!" << endl;
         }
         else if( izbor == 4 )
         {
