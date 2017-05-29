@@ -66,7 +66,25 @@ int main()
         }
         else if( izbor == 4 )
         {
-        }
+            string prezimeime;
+            cout << "unesite Prezime i Ime koji zelite pretrazit";
+            cin.ignore();
+            getline(cin, prezimeime);
+            cout<< endl<< prezimeime;
+            bool postoji=false;
+            for(int i=0;i<brojOsoba;i++)
+            {
+                if(prezimeime==prezimeIme[brojOsoba])
+                {
+                    cout<<"osoba se nalazi u imeniku " << endl;
+                    cout << prezimeIme[i] << "\t" << brTelefona[i] << "\t" << "\t" << adresa[i] << endl;
+                    postoji=true;
+                    break;
+                }
+            }
+            if(postoji==false)
+                cout<< "ne postoji u imeniku!" << endl;
+            }
         else if( izbor == 5 )
         {
         }
